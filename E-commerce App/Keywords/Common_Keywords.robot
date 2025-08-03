@@ -9,6 +9,7 @@ Resource    ../ObjectRepository/Generic_Locators.robot
 
 *** Keywords ***
 Open Browser and Maximize Window
+    [Documentation]    Opens the browser and maximizes the window
     Open Browser    ${url}    Chrome
     Maximize Browser Window
 
