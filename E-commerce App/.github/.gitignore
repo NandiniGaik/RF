@@ -1,0 +1,4 @@
+# Ignore all screenshots (commonly .png or .jpg)
+*.png
+*.jpg
+*.jpeg

@@ -60,8 +60,9 @@ Click Element Using Javascript Executor
     ${element_locator}=    Get WebElement    ${element_locator}
     Execute Javascript    arguments[0].click();    ARGUEMENTS    ${element_locator}
 
-Click "${button_name}" button_name
+Click button_name
     [Documentation]    Clicks the button with the specified name
+    [Arguments]    ${button_name}
     ${buttton_xpath}=    Create Dynamic Xpath    ${GENERIC_BUTTON}    ${button_name}
     Wait Until Page Contains Element    ${buttton_xpath}    timeout=${timeout_ten_seconds}
     ${status}=    Run Keyword And Return Status    Scroll Element Into View    ${buttton_xpath}
@@ -72,3 +73,12 @@ Click "${button_name}" button_name
         Click Element Using Javascript Executor    ${buttton_xpath}
     END
     
+Input text in field
+    [Documentation]    Inputs text in the specified input field
+    [Arguments]    ${product_name}    ${input_name_field}
+    ${input_xpath}=    Create Dynamic Xpath    ${GENERIC_INPUT_NAME}    ${input_name_field}
+    #Wait Until Element Is Visible    ${input_xpath}    ${timeout_thirty_seconds}
+    Run Keyword And Ignore Error    Scroll Element Into View    ${input_xpath}
+    Wait Until Element Is Visible    locator=${input_xpath}    timeout=${timeout_ten_seconds}
+    Wait for Specified timeout    ${timeout_five_seconds}
+    Input Text    ${input_xpath}    ${product_name}
