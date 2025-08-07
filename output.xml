@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.2 on darwin)" generated="2025-08-03T16:50:01.363601" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.12.2 on darwin)" generated="2025-08-07T07:41:42.768467" rpa="false" schemaversion="5">
 <suite id="s1" name="ProductDisplay" source="/Users/mac/Documents/RobotFramewoRK/E-commerce App/TestSuite/ProductDisplay.robot">
-<test id="s1-t1" name="Thumbnail_Product_Display_Test" line="13">
+<test id="s1-t1" name=" Validate_Product_Name_Brand_And_Code_Displayed" line="29">
 <kw name="Open Browser and Maximize Window" owner="Common_Keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:01.491019" level="INFO">Opening browser 'Chrome' to base url 'https://tutorialsninja.com/demo/'.</msg>
+<msg time="2025-08-07T07:41:42.927634" level="INFO">Opening browser 'Chrome' to base url 'https://tutorialsninja.com/demo/'.</msg>
 <arg>${url}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-08-03T16:50:01.490799" elapsed="4.104019"/>
+<status status="PASS" start="2025-08-07T07:41:42.927408" elapsed="3.621967"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-08-03T16:50:05.595477" elapsed="0.363215"/>
+<status status="PASS" start="2025-08-07T07:41:46.549987" elapsed="0.905779"/>
 </kw>
-<status status="PASS" start="2025-08-03T16:50:01.490187" elapsed="4.468726"/>
+<doc>Opens the browser and maximizes the window</doc>
+<status status="PASS" start="2025-08-07T07:41:42.926773" elapsed="4.529199"/>
 </kw>
 <kw name="Search product in Search Bar" owner="Product_Display_Keywords">
 <kw name="Input text in field" owner="Common_Keywords">
@@ -22,15 +23,15 @@
 <if>
 <branch type="IF" condition="${single_value_replacement}">
 <kw name="Replace String" owner="String">
-<msg time="2025-08-03T16:50:05.961559" level="INFO">${final_xpath} = //input[@name="search"]</msg>
+<msg time="2025-08-07T07:41:47.458105" level="INFO">${final_xpath} = //input[@name="search"]</msg>
 <var>${final_xpath}</var>
 <arg>${xpath}</arg>
 <arg>VALUE_PLACEHOLDER</arg>
 <arg>${value_to_replace}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-03T16:50:05.961341" elapsed="0.000520"/>
+<status status="PASS" start="2025-08-07T07:41:47.457914" elapsed="0.000342"/>
 </kw>
-<status status="PASS" start="2025-08-03T16:50:05.961105" elapsed="0.000831"/>
+<status status="PASS" start="2025-08-07T07:41:47.457693" elapsed="0.000629"/>
 </branch>
 <branch type="ELSE">
 <kw name="Replace String" owner="String">
@@ -39,7 +40,7 @@
 <arg>KEY_PLACEHOLDER</arg>
 <arg>${key_to_replace}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:05.962106" elapsed="0.000067"/>
+<status status="NOT RUN" start="2025-08-07T07:41:47.458484" elapsed="0.000061"/>
 </kw>
 <kw name="Replace String" owner="String">
 <var>${final_xpath}</var>
@@ -47,81 +48,81 @@
 <arg>VALUE_PLACEHOLDER</arg>
 <arg>${value_to_replace}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:05.962276" elapsed="0.000053"/>
+<status status="NOT RUN" start="2025-08-07T07:41:47.458645" elapsed="0.000048"/>
 </kw>
-<status status="NOT RUN" start="2025-08-03T16:50:05.961997" elapsed="0.000385"/>
+<status status="NOT RUN" start="2025-08-07T07:41:47.458380" elapsed="0.000365"/>
 </branch>
-<status status="PASS" start="2025-08-03T16:50:05.961066" elapsed="0.001363"/>
+<status status="PASS" start="2025-08-07T07:41:47.457665" elapsed="0.001127"/>
 </if>
 <return>
 <value>${final_xpath}</value>
-<status status="PASS" start="2025-08-03T16:50:05.962457" elapsed="0.000085"/>
+<status status="PASS" start="2025-08-07T07:41:47.458884" elapsed="0.000184"/>
 </return>
-<msg time="2025-08-03T16:50:05.962661" level="INFO">${input_xpath} = //input[@name="search"]</msg>
+<msg time="2025-08-07T07:41:47.459234" level="INFO">${input_xpath} = //input[@name="search"]</msg>
 <var>${input_xpath}</var>
 <arg>${GENERIC_INPUT_NAME}</arg>
 <arg>${input_name_field}</arg>
 <doc>Keyword to create dynamic xpath replacing single string or two string</doc>
-<status status="PASS" start="2025-08-03T16:50:05.960411" elapsed="0.002308"/>
+<status status="PASS" start="2025-08-07T07:41:47.457059" elapsed="0.002246"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${input_xpath}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-08-03T16:50:05.963042" elapsed="0.271054"/>
+<status status="PASS" start="2025-08-07T07:41:47.459683" elapsed="0.276135"/>
 </kw>
 <arg>Scroll Element Into View</arg>
 <arg>${input_xpath}</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-08-03T16:50:05.962849" elapsed="0.271546"/>
+<status status="PASS" start="2025-08-07T07:41:47.459481" elapsed="0.276477"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>locator=${input_xpath}</arg>
 <arg>timeout=${timeout_ten_seconds}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-03T16:50:06.234706" elapsed="0.019359"/>
+<status status="PASS" start="2025-08-07T07:41:47.736118" elapsed="0.012441"/>
 </kw>
 <kw name="Wait for Specified timeout" owner="Common_Keywords">
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="//h1[@class='dummy']">
-<msg time="2025-08-03T16:50:06.257550" level="FAIL">No keyword with name '//h1[@class='dummy']' found.</msg>
+<msg time="2025-08-07T07:41:47.751421" level="FAIL">No keyword with name '//h1[@class='dummy']' found.</msg>
 <arg>${timeout}</arg>
-<status status="FAIL" start="2025-08-03T16:50:06.257348" elapsed="0.000373">No keyword with name '//h1[@class='dummy']' found.</status>
+<status status="FAIL" start="2025-08-07T07:41:47.751232" elapsed="0.000314">No keyword with name '//h1[@class='dummy']' found.</status>
 </kw>
 <arg>${DUMMY_LOC}</arg>
 <arg>${timeout}</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-08-03T16:50:06.254914" elapsed="0.002947"/>
+<status status="PASS" start="2025-08-07T07:41:47.749054" elapsed="0.002649"/>
 </kw>
 <arg>${timeout_five_seconds}</arg>
-<status status="PASS" start="2025-08-03T16:50:06.254464" elapsed="0.003487"/>
+<status status="PASS" start="2025-08-07T07:41:47.748780" elapsed="0.003036"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:06.258402" level="INFO">Typing text 'iMac' into text field '//input[@name="search"]'.</msg>
+<msg time="2025-08-07T07:41:47.752325" level="INFO">Typing text 'iMac' into text field '//input[@name="search"]'.</msg>
 <arg>${input_xpath}</arg>
 <arg>${product_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-03T16:50:06.258109" elapsed="0.102884"/>
+<status status="PASS" start="2025-08-07T07:41:47.752001" elapsed="0.115561"/>
 </kw>
 <arg>${product_name}</arg>
 <arg>${input_name_field}</arg>
 <doc>Inputs text in the specified input field</doc>
-<status status="PASS" start="2025-08-03T16:50:05.959998" elapsed="0.401209"/>
+<status status="PASS" start="2025-08-07T07:41:47.456741" elapsed="0.410975"/>
 </kw>
 <kw name="Click button_name" owner="Common_Keywords">
 <kw name="Create Dynamic Xpath" owner="Common_Keywords">
 <if>
 <branch type="IF" condition="${single_value_replacement}">
 <kw name="Replace String" owner="String">
-<msg time="2025-08-03T16:50:06.362731" level="INFO">${final_xpath} = //button[@class="btn btn-default btn-lg"]</msg>
+<msg time="2025-08-07T07:41:47.869166" level="INFO">${final_xpath} = //button[@class="btn btn-default btn-lg"]</msg>
 <var>${final_xpath}</var>
 <arg>${xpath}</arg>
 <arg>VALUE_PLACEHOLDER</arg>
 <arg>${value_to_replace}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-03T16:50:06.362569" elapsed="0.000263"/>
+<status status="PASS" start="2025-08-07T07:41:47.869002" elapsed="0.000251"/>
 </kw>
-<status status="PASS" start="2025-08-03T16:50:06.362387" elapsed="0.000509"/>
+<status status="PASS" start="2025-08-07T07:41:47.868821" elapsed="0.000496"/>
 </branch>
 <branch type="ELSE">
 <kw name="Replace String" owner="String">
@@ -130,7 +131,7 @@
 <arg>KEY_PLACEHOLDER</arg>
 <arg>${key_to_replace}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:06.363052" elapsed="0.000053"/>
+<status status="NOT RUN" start="2025-08-07T07:41:47.869472" elapsed="0.000052"/>
 </kw>
 <kw name="Replace String" owner="String">
 <var>${final_xpath}</var>
@@ -138,41 +139,41 @@
 <arg>VALUE_PLACEHOLDER</arg>
 <arg>${value_to_replace}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:06.363207" elapsed="0.000047"/>
+<status status="NOT RUN" start="2025-08-07T07:41:47.869619" elapsed="0.000047"/>
 </kw>
-<status status="NOT RUN" start="2025-08-03T16:50:06.362951" elapsed="0.000361"/>
+<status status="NOT RUN" start="2025-08-07T07:41:47.869372" elapsed="0.000344"/>
 </branch>
-<status status="PASS" start="2025-08-03T16:50:06.362367" elapsed="0.000991"/>
+<status status="PASS" start="2025-08-07T07:41:47.868801" elapsed="0.000959"/>
 </if>
 <return>
 <value>${final_xpath}</value>
-<status status="PASS" start="2025-08-03T16:50:06.363384" elapsed="0.000060"/>
+<status status="PASS" start="2025-08-07T07:41:47.869788" elapsed="0.000056"/>
 </return>
-<msg time="2025-08-03T16:50:06.363547" level="INFO">${buttton_xpath} = //button[@class="btn btn-default btn-lg"]</msg>
+<msg time="2025-08-07T07:41:47.869948" level="INFO">${buttton_xpath} = //button[@class="btn btn-default btn-lg"]</msg>
 <var>${buttton_xpath}</var>
 <arg>${GENERIC_BUTTON}</arg>
 <arg>${button_name}</arg>
 <doc>Keyword to create dynamic xpath replacing single string or two string</doc>
-<status status="PASS" start="2025-08-03T16:50:06.361863" elapsed="0.001742"/>
+<status status="PASS" start="2025-08-07T07:41:47.868275" elapsed="0.001730"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${buttton_xpath}</arg>
 <arg>timeout=${timeout_ten_seconds}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-08-03T16:50:06.363709" elapsed="0.007576"/>
+<status status="PASS" start="2025-08-07T07:41:47.870107" elapsed="0.008051"/>
 </kw>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${buttton_xpath}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-08-03T16:50:06.371727" elapsed="0.266814"/>
+<status status="PASS" start="2025-08-07T07:41:47.878590" elapsed="0.372898"/>
 </kw>
-<msg time="2025-08-03T16:50:06.638716" level="INFO">${status} = True</msg>
+<msg time="2025-08-07T07:41:48.251664" level="INFO">${status} = True</msg>
 <var>${status}</var>
 <arg>Scroll Element Into View</arg>
 <arg>${buttton_xpath}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-08-03T16:50:06.371512" elapsed="0.267269"/>
+<status status="PASS" start="2025-08-07T07:41:47.878386" elapsed="0.373347"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <arg>${status}==${False}</arg>
@@ -182,51 +183,51 @@
 <arg>${None}</arg>
 <arg>PAGE_DOWN</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-08-03T16:50:06.639026" elapsed="0.000285"/>
+<status status="PASS" start="2025-08-07T07:41:48.252048" elapsed="0.000348"/>
 </kw>
 <try>
 <branch type="TRY">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:06.639889" level="INFO">Clicking element '//button[@class="btn btn-default btn-lg"]'.</msg>
+<msg time="2025-08-07T07:41:48.252987" level="INFO">Clicking element '//button[@class="btn btn-default btn-lg"]'.</msg>
 <arg>${buttton_xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-03T16:50:06.639611" elapsed="0.333272"/>
+<status status="PASS" start="2025-08-07T07:41:48.252785" elapsed="0.222520"/>
 </kw>
-<status status="PASS" start="2025-08-03T16:50:06.639456" elapsed="0.333553"/>
+<status status="PASS" start="2025-08-07T07:41:48.252613" elapsed="0.222831"/>
 </branch>
 <branch type="EXCEPT">
 <pattern>SeleniumLibrary.ElementNotFound</pattern>
 <kw name="Click Element Using Javascript Executor" owner="Common_Keywords">
 <arg>${buttton_xpath}</arg>
-<status status="NOT RUN" start="2025-08-03T16:50:06.973299" elapsed="0.000064"/>
+<status status="NOT RUN" start="2025-08-07T07:41:48.475786" elapsed="0.000068"/>
 </kw>
-<status status="NOT RUN" start="2025-08-03T16:50:06.973105" elapsed="0.000315"/>
+<status status="NOT RUN" start="2025-08-07T07:41:48.475574" elapsed="0.000342"/>
 </branch>
-<status status="PASS" start="2025-08-03T16:50:06.639408" elapsed="0.334073"/>
+<status status="PASS" start="2025-08-07T07:41:48.252554" elapsed="0.223426"/>
 </try>
 <arg>${button_name}</arg>
 <doc>Clicks the button with the specified name</doc>
-<status status="PASS" start="2025-08-03T16:50:06.361529" elapsed="0.611993"/>
+<status status="PASS" start="2025-08-07T07:41:47.867956" elapsed="0.608067"/>
 </kw>
 <arg>${product_name}</arg>
 <arg>${input_name_field}</arg>
 <doc>Searches for the specified product in the search bar</doc>
-<status status="PASS" start="2025-08-03T16:50:05.959413" elapsed="1.014173"/>
+<status status="PASS" start="2025-08-07T07:41:47.456338" elapsed="1.019752"/>
 </kw>
 <kw name="Click Dynamic Xpath Element" owner="Common_Keywords">
 <kw name="Create Dynamic Xpath" owner="Common_Keywords">
 <if>
 <branch type="IF" condition="${single_value_replacement}">
 <kw name="Replace String" owner="String">
-<msg time="2025-08-03T16:50:06.975998" level="INFO">${final_xpath} = //a[text()="iMac"]</msg>
+<msg time="2025-08-07T07:41:48.477516" level="INFO">${final_xpath} = //a[text()="iMac"]</msg>
 <var>${final_xpath}</var>
 <arg>${xpath}</arg>
 <arg>VALUE_PLACEHOLDER</arg>
 <arg>${value_to_replace}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-03T16:50:06.975803" elapsed="0.000286"/>
+<status status="PASS" start="2025-08-07T07:41:48.477346" elapsed="0.000320"/>
 </kw>
-<status status="PASS" start="2025-08-03T16:50:06.975547" elapsed="0.000613"/>
+<status status="PASS" start="2025-08-07T07:41:48.477165" elapsed="0.000621"/>
 </branch>
 <branch type="ELSE">
 <kw name="Replace String" owner="String">
@@ -235,7 +236,7 @@
 <arg>KEY_PLACEHOLDER</arg>
 <arg>${key_to_replace}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:06.976322" elapsed="0.000055"/>
+<status status="NOT RUN" start="2025-08-07T07:41:48.478009" elapsed="0.000065"/>
 </kw>
 <kw name="Replace String" owner="String">
 <var>${final_xpath}</var>
@@ -243,1766 +244,253 @@
 <arg>VALUE_PLACEHOLDER</arg>
 <arg>${value_to_replace}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:06.976475" elapsed="0.000049"/>
+<status status="NOT RUN" start="2025-08-07T07:41:48.478178" elapsed="0.000050"/>
 </kw>
-<status status="NOT RUN" start="2025-08-03T16:50:06.976216" elapsed="0.000358"/>
+<status status="NOT RUN" start="2025-08-07T07:41:48.477855" elapsed="0.000424"/>
 </branch>
-<status status="PASS" start="2025-08-03T16:50:06.975512" elapsed="0.001107"/>
+<status status="PASS" start="2025-08-07T07:41:48.477148" elapsed="0.001177"/>
 </if>
 <return>
 <value>${final_xpath}</value>
-<status status="PASS" start="2025-08-03T16:50:06.976645" elapsed="0.000058"/>
+<status status="PASS" start="2025-08-07T07:41:48.478352" elapsed="0.000060"/>
 </return>
-<msg time="2025-08-03T16:50:06.976809" level="INFO">${xpath} = //a[text()="iMac"]</msg>
+<msg time="2025-08-07T07:41:48.478541" level="INFO">${xpath} = //a[text()="iMac"]</msg>
 <var>${xpath}</var>
 <arg>${element_locator}</arg>
 <arg>${value_to_replace}</arg>
 <doc>Keyword to create dynamic xpath replacing single string or two string</doc>
-<status status="PASS" start="2025-08-03T16:50:06.974354" elapsed="0.002514"/>
+<status status="PASS" start="2025-08-07T07:41:48.476627" elapsed="0.001984"/>
 </kw>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${xpath}</arg>
 <arg>timeout=${timeout_ten_seconds}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-03T16:50:06.977121" elapsed="0.017127"/>
+<status status="PASS" start="2025-08-07T07:41:48.478874" elapsed="0.013575"/>
 </kw>
-<msg time="2025-08-03T16:50:06.994414" level="INFO">${status} = True</msg>
+<msg time="2025-08-07T07:41:48.492617" level="INFO">${status} = True</msg>
 <var>${status}</var>
 <arg>Wait Until Element Is Visible</arg>
 <arg>${xpath}</arg>
 <arg>timeout=${timeout_ten_seconds}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-08-03T16:50:06.976976" elapsed="0.017497"/>
+<status status="PASS" start="2025-08-07T07:41:48.478722" elapsed="0.013958"/>
 </kw>
 <if>
 <branch type="IF" condition="${status}">
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${xpath}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-08-03T16:50:06.994746" elapsed="0.268916"/>
+<status status="PASS" start="2025-08-07T07:41:48.492952" elapsed="0.475655"/>
 </kw>
 <kw name="Wait for Specified timeout" owner="Common_Keywords">
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="//h1[@class='dummy']">
-<msg time="2025-08-03T16:50:07.266164" level="FAIL">No keyword with name '//h1[@class='dummy']' found.</msg>
+<msg time="2025-08-07T07:41:48.971015" level="FAIL">No keyword with name '//h1[@class='dummy']' found.</msg>
 <arg>${timeout}</arg>
-<status status="FAIL" start="2025-08-03T16:50:07.266075" elapsed="0.000163">No keyword with name '//h1[@class='dummy']' found.</status>
+<status status="FAIL" start="2025-08-07T07:41:48.970952" elapsed="0.000131">No keyword with name '//h1[@class='dummy']' found.</status>
 </kw>
 <arg>${DUMMY_LOC}</arg>
 <arg>${timeout}</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-08-03T16:50:07.264198" elapsed="0.002116"/>
+<status status="PASS" start="2025-08-07T07:41:48.969136" elapsed="0.002018"/>
 </kw>
 <arg>${timeout_five_seconds}</arg>
-<status status="PASS" start="2025-08-03T16:50:07.263915" elapsed="0.002467"/>
+<status status="PASS" start="2025-08-07T07:41:48.968858" elapsed="0.002359"/>
 </kw>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:07.266815" level="INFO">Clicking element '//a[text()="iMac"]'.</msg>
+<msg time="2025-08-07T07:41:48.971617" level="INFO">Clicking element '//a[text()="iMac"]'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-03T16:50:07.266642" elapsed="2.523886"/>
+<status status="PASS" start="2025-08-07T07:41:48.971459" elapsed="1.500796"/>
 </kw>
-<msg time="2025-08-03T16:50:09.791105" level="INFO">${status1} = True</msg>
+<msg time="2025-08-07T07:41:50.472534" level="INFO">${status1} = True</msg>
 <var>${status1}</var>
 <arg>Click Element</arg>
 <arg>${xpath}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-08-03T16:50:07.266492" elapsed="2.524744"/>
+<status status="PASS" start="2025-08-07T07:41:48.971319" elapsed="1.501329"/>
 </kw>
 <if>
 <branch type="IF" condition="${status1}==$False">
 <kw name="Click Element Using Javascript Executor" owner="Common_Keywords">
 <arg>${xpath}</arg>
-<status status="NOT RUN" start="2025-08-03T16:50:09.792136" elapsed="0.000101"/>
+<status status="NOT RUN" start="2025-08-07T07:41:50.473401" elapsed="0.000110"/>
 </kw>
-<status status="NOT RUN" start="2025-08-03T16:50:09.791429" elapsed="0.000909"/>
+<status status="NOT RUN" start="2025-08-07T07:41:50.472822" elapsed="0.000797"/>
 </branch>
-<status status="PASS" start="2025-08-03T16:50:09.791384" elapsed="0.001037"/>
+<status status="PASS" start="2025-08-07T07:41:50.472786" elapsed="0.000930"/>
 </if>
-<status status="PASS" start="2025-08-03T16:50:06.994571" elapsed="2.797878"/>
+<status status="PASS" start="2025-08-07T07:41:48.492777" elapsed="1.980973"/>
 </branch>
-<status status="PASS" start="2025-08-03T16:50:06.994550" elapsed="2.797965"/>
+<status status="PASS" start="2025-08-07T07:41:48.492756" elapsed="1.981075"/>
 </if>
 <arg>${PRODUCT_DISPLAYED}</arg>
 <arg>${product_name}</arg>
-<status status="PASS" start="2025-08-03T16:50:06.973963" elapsed="2.818612"/>
+<status status="PASS" start="2025-08-07T07:41:48.476312" elapsed="1.997580"/>
 </kw>
-<kw name="Click on on thumbnail product display and verify thumbnails" owner="Product_Display_Keywords">
-<for flavor="IN RANGE">
-<iter>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-08-03T16:50:09.794483" level="INFO">(//ul[@class="thumbnails"]//li)[{index}]</msg>
-<arg>${PRODUCT_DISPLAY_THUMBNAIL}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-08-03T16:50:09.794263" elapsed="0.001340"/>
+<kw name="Verify Product Name,Brand and Product Code is" owner="Product_Display_Keywords">
+<kw name="Create Dynamic Xpath" owner="Common_Keywords">
+<if>
+<branch type="IF" condition="${single_value_replacement}">
+<kw name="Replace String" owner="String">
+<msg time="2025-08-07T07:41:50.477455" level="INFO">${final_xpath} = //h1[text()="iMac"]</msg>
+<var>${final_xpath}</var>
+<arg>${xpath}</arg>
+<arg>VALUE_PLACEHOLDER</arg>
+<arg>${value_to_replace}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-08-07T07:41:50.477182" elapsed="0.000390"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-08-03T16:50:09.796248" level="INFO">/</msg>
-<arg>${PRODUCT_DISPLAY_THUMBNAIL}[${counter}]</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-08-03T16:50:09.795915" elapsed="0.000476"/>
+<status status="PASS" start="2025-08-07T07:41:50.476918" elapsed="0.000752"/>
+</branch>
+<branch type="ELSE">
+<kw name="Replace String" owner="String">
+<var>${final_replaced_xpath}</var>
+<arg>${xpath}</arg>
+<arg>KEY_PLACEHOLDER</arg>
+<arg>${key_to_replace}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="NOT RUN" start="2025-08-07T07:41:50.477910" elapsed="0.000083"/>
+</kw>
+<kw name="Replace String" owner="String">
+<var>${final_xpath}</var>
+<arg>${final_replaced_xpath}</arg>
+<arg>VALUE_PLACEHOLDER</arg>
+<arg>${value_to_replace}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="NOT RUN" start="2025-08-07T07:41:50.478143" elapsed="0.000080"/>
+</kw>
+<status status="NOT RUN" start="2025-08-07T07:41:50.477753" elapsed="0.000631"/>
+</branch>
+<status status="PASS" start="2025-08-07T07:41:50.476894" elapsed="0.001567"/>
+</if>
+<return>
+<value>${final_xpath}</value>
+<status status="PASS" start="2025-08-07T07:41:50.478500" elapsed="0.000084"/>
+</return>
+<msg time="2025-08-07T07:41:50.478750" level="INFO">${product_name_xpath} = //h1[text()="iMac"]</msg>
+<var>${product_name_xpath}</var>
+<arg>${GENERIC_H1}</arg>
+<arg>${product_name}</arg>
+<doc>Keyword to create dynamic xpath replacing single string or two string</doc>
+<status status="PASS" start="2025-08-07T07:41:50.475247" elapsed="0.004295"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-08-07T07:41:50.493286" level="INFO">Element '//h1[text()="iMac"]' is displayed.</msg>
+<arg>${product_name_xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-07T07:41:50.479906" elapsed="0.013566"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-08-07T07:41:50.509169" level="INFO">${brand_txt} = Apple</msg>
+<var>${brand_txt}</var>
+<arg>${BRAND}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-07T07:41:50.493652" elapsed="0.015658"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${brand_txt}</arg>
+<arg>${product_brand}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-08-07T07:41:50.509556" elapsed="0.000239"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-08-07T07:41:50.523846" level="INFO">${actual_product_code} = Product Code:Product 14</msg>
+<var>${actual_product_code}</var>
+<arg>${CODE}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-07T07:41:50.509920" elapsed="0.014057"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2025-08-07T07:41:50.524356" level="INFO">${parts} = ['Product Code', 'Product 14']</msg>
+<var>${parts}</var>
+<arg>${actual_product_code}</arg>
+<arg>:</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2025-08-07T07:41:50.524149" elapsed="0.000269"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-08-03T16:50:09.797276" level="INFO">${xpath} = (//ul[@class="thumbnails"]//li)[1]</msg>
-<var>${xpath}</var>
-<arg>${PRODUCT_DISPLAY_THUMBNAIL.replace('{index}', str(${counter}))}</arg>
+<msg time="2025-08-07T07:41:50.525109" level="INFO">${actual_product_code} = Product 14</msg>
+<var>${actual_product_code}</var>
+<arg>${parts[1]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-08-03T16:50:09.796553" elapsed="0.000813"/>
+<status status="PASS" start="2025-08-07T07:41:50.524529" elapsed="0.000643"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-08-03T16:50:09.797687" level="INFO">Clicking: (//ul[@class="thumbnails"]//li)[1]</msg>
-<arg>Clicking: ${xpath}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-08-03T16:50:09.797524" elapsed="0.000362"/>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_product_code}</arg>
+<arg>${product_code}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-08-07T07:41:50.525282" elapsed="0.000159"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:09.798233" level="INFO">Clicking element '(//ul[@class="thumbnails"]//li)[1]'.</msg>
-<arg>${xpath}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-03T16:50:09.798039" elapsed="0.044893"/>
+<arg>${product_name}</arg>
+<arg>${product_brand}</arg>
+<arg>${product_code}</arg>
+<doc>Verifies that Product Name, Brand and Product Code are displayed in the Product Display Page</doc>
+<status status="PASS" start="2025-08-07T07:41:50.474557" elapsed="0.051043"/>
 </kw>
-<kw name="Verify color of thumbnail white box" owner="Product_Display_Keywords">
-<kw name="Get CSS Property Value" owner="Key_Login_Keywords">
-<kw name="Get WebElement" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:09.852361" level="INFO">${css} = &lt;selenium.webdriver.remote.webelement.WebElement (session="e43c0cfb8046dd04c8052bad86753a2a", element="f.3EBD1C1408B6FA1D519F97E0FC9E8A4C.d.7D978EC3E4BB253A9CD6082FB281628E.e.113")&gt;</msg>
-<var>${css}</var>
-<arg>${locator}</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<status status="PASS" start="2025-08-03T16:50:09.843785" elapsed="0.008912"/>
+<kw name="Capture Whole Page Screenshot" owner="Common_Keywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-08-07T07:41:50.526654" level="INFO">Executing JavaScript:
+"document.body.style.zoom='50%';"
+Without any arguments.</msg>
+<arg>"document.body.style.zoom='${zoom_in}';"</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-08-07T07:41:50.526268" elapsed="0.003760"/>
 </kw>
-<kw name="Call Method" owner="BuiltIn">
-<msg time="2025-08-03T16:50:09.859238" level="INFO">${prop_val} = rgba(0, 0, 0, 0)</msg>
-<var>${prop_val}</var>
-<arg>${css}</arg>
-<arg>value_of_css_property</arg>
-<arg>${attribute name}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-08-03T16:50:09.852880" elapsed="0.006487"/>
-</kw>
-<return>
-<value>${prop_val}</value>
-<status status="PASS" start="2025-08-03T16:50:09.859463" elapsed="0.000077"/>
-</return>
-<msg time="2025-08-03T16:50:09.859666" level="INFO">${color} = rgba(0, 0, 0, 0)</msg>
-<var>${color}</var>
-<arg>${THUMBNAIL_WHITE_BOX}</arg>
-<arg>${backgroundColor}</arg>
-<doc>Get the CSS property value of an element</doc>
-<status status="PASS" start="2025-08-03T16:50:09.843537" elapsed="0.016187"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-08-03T16:50:09.860012" level="INFO">rgba(0, 0, 0, 0):0, 0, 0, 0</msg>
-<arg>${color}:${expected_color}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-08-03T16:50:09.859857" elapsed="0.000224"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${color}</arg>
-<arg>${expected_color}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-08-03T16:50:09.860197" elapsed="0.000161"/>
-</kw>
-<arg>${thumbnail_color}</arg>
-<doc>Verifies the color of the thumbnail white box</doc>
-<status status="PASS" start="2025-08-03T16:50:09.843216" elapsed="0.017218"/>
-</kw>
-<kw name="Wait for Specified timeout" owner="Common_Keywords">
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
-<kw name="//h1[@class='dummy']">
-<msg time="2025-08-03T16:50:09.862754" level="FAIL">No keyword with name '//h1[@class='dummy']' found.</msg>
-<arg>${timeout}</arg>
-<status status="FAIL" start="2025-08-03T16:50:09.862643" elapsed="0.000188">No keyword with name '//h1[@class='dummy']' found.</status>
-</kw>
-<arg>${DUMMY_LOC}</arg>
-<arg>${timeout}</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-08-03T16:50:09.860767" elapsed="0.002161"/>
-</kw>
-<arg>${timeout_ten_seconds}</arg>
-<status status="PASS" start="2025-08-03T16:50:09.860557" elapsed="0.002446"/>
-</kw>
-<kw name="Capture Page Screenshot without Zoom" owner="Common_Keywords">
 <kw name="Get Current Date" owner="DateTime">
-<msg time="2025-08-03T16:50:09.863621" level="INFO">${timestamp} = 20250803165009</msg>
+<msg time="2025-08-07T07:41:50.530433" level="INFO">${timestamp} = 20250807074150</msg>
 <var>${timestamp}</var>
 <arg>result_format=%Y%m%d%H%M%S</arg>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2025-08-03T16:50:09.863401" elapsed="0.000290"/>
+<status status="PASS" start="2025-08-07T07:41:50.530204" elapsed="0.000303"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:10.044486" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Thumbnail_white_box_20250803165009.png"&gt;&lt;img src="Thumbnail_white_box_20250803165009.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-08-03T16:50:10.044696" level="INFO">${SCREENSHOT_PATH} = /Users/mac/Documents/RobotFramework/Thumbnail_white_box_20250803165009.png</msg>
+<msg time="2025-08-07T07:41:50.707947" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="ProductDisplayPage_20250807074150.png"&gt;&lt;img src="ProductDisplayPage_20250807074150.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-08-07T07:41:50.708165" level="INFO">${SCREENSHOT_PATH} = /Users/mac/Documents/RobotFramework/ProductDisplayPage_20250807074150.png</msg>
 <var>${SCREENSHOT_PATH}</var>
 <arg>${name}_${timestamp}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-08-03T16:50:09.863824" elapsed="0.180934"/>
+<status status="PASS" start="2025-08-07T07:41:50.530622" elapsed="0.177602"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-08-07T07:41:50.708701" level="INFO">Executing JavaScript:
+"document.body.style.zoom='100%';"
+Without any arguments.</msg>
+<arg>"document.body.style.zoom='100%';"</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-08-07T07:41:50.708381" elapsed="0.003634"/>
 </kw>
 <return>
 <value>${SCREENSHOT_PATH}</value>
-<status status="PASS" start="2025-08-03T16:50:10.044847" elapsed="0.000076"/>
+<status status="PASS" start="2025-08-07T07:41:50.712119" elapsed="0.000081"/>
 </return>
-<arg>Thumbnail_white_box</arg>
-<status status="PASS" start="2025-08-03T16:50:09.863166" elapsed="0.181863"/>
-</kw>
-<kw name="Verify navigation to next and prev thumbnail" owner="Product_Display_Keywords">
-<kw name="Click button_name" owner="Common_Keywords">
-<kw name="Create Dynamic Xpath" owner="Common_Keywords">
-<if>
-<branch type="IF" condition="${single_value_replacement}">
-<kw name="Replace String" owner="String">
-<msg time="2025-08-03T16:50:10.046527" level="INFO">${final_xpath} = //button[@class="mfp-arrow mfp-arrow-right mfp-prevent-close"]</msg>
-<var>${final_xpath}</var>
-<arg>${xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.046353" elapsed="0.000247"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:10.046177" elapsed="0.000497"/>
-</branch>
-<branch type="ELSE">
-<kw name="Replace String" owner="String">
-<var>${final_replaced_xpath}</var>
-<arg>${xpath}</arg>
-<arg>KEY_PLACEHOLDER</arg>
-<arg>${key_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:10.046825" elapsed="0.000052"/>
-</kw>
-<kw name="Replace String" owner="String">
-<var>${final_xpath}</var>
-<arg>${final_replaced_xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:10.046973" elapsed="0.000049"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:10.046728" elapsed="0.000346"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:10.046161" elapsed="0.001083"/>
-</if>
-<return>
-<value>${final_xpath}</value>
-<status status="PASS" start="2025-08-03T16:50:10.047382" elapsed="0.000108"/>
-</return>
-<msg time="2025-08-03T16:50:10.047655" level="INFO">${buttton_xpath} = //button[@class="mfp-arrow mfp-arrow-right mfp-prevent-close"]</msg>
-<var>${buttton_xpath}</var>
-<arg>${GENERIC_BUTTON}</arg>
-<arg>${button_name}</arg>
-<doc>Keyword to create dynamic xpath replacing single string or two string</doc>
-<status status="PASS" start="2025-08-03T16:50:10.045680" elapsed="0.002052"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${buttton_xpath}</arg>
-<arg>timeout=${timeout_ten_seconds}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.047869" elapsed="0.006911"/>
-</kw>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${buttton_xpath}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.055150" elapsed="0.296130"/>
-</kw>
-<msg time="2025-08-03T16:50:10.351604" level="INFO">${status} = True</msg>
-<var>${status}</var>
-<arg>Scroll Element Into View</arg>
-<arg>${buttton_xpath}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.054974" elapsed="0.296737"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>${status}==${False}</arg>
-<arg>Repeat Keyword</arg>
-<arg>${retry_ten_times}</arg>
-<arg>Press Keys</arg>
-<arg>${None}</arg>
-<arg>PAGE_DOWN</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.351994" elapsed="0.000388"/>
-</kw>
-<try>
-<branch type="TRY">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:10.353121" level="INFO">Clicking element '//button[@class="mfp-arrow mfp-arrow-right mfp-prevent-close"]'.</msg>
-<arg>${buttton_xpath}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.352863" elapsed="0.035246"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:10.352697" elapsed="0.035543"/>
-</branch>
-<branch type="EXCEPT">
-<pattern>SeleniumLibrary.ElementNotFound</pattern>
-<kw name="Click Element Using Javascript Executor" owner="Common_Keywords">
-<arg>${buttton_xpath}</arg>
-<status status="NOT RUN" start="2025-08-03T16:50:10.388614" elapsed="0.000068"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:10.388382" elapsed="0.000367"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:10.352641" elapsed="0.036171"/>
-</try>
-<arg>${next_class}</arg>
-<doc>Clicks the button with the specified name</doc>
-<status status="PASS" start="2025-08-03T16:50:10.045443" elapsed="0.343416"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:10.400519" level="INFO">Element '//img[@class="mfp-img"]' is displayed.</msg>
-<arg>${THUMBNAIL_IMG}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.388990" elapsed="0.011710"/>
-</kw>
-<kw name="Click button_name" owner="Common_Keywords">
-<kw name="Create Dynamic Xpath" owner="Common_Keywords">
-<if>
-<branch type="IF" condition="${single_value_replacement}">
-<kw name="Replace String" owner="String">
-<msg time="2025-08-03T16:50:10.402114" level="INFO">${final_xpath} = //button[@class="mfp-arrow mfp-arrow-left mfp-prevent-close"]</msg>
-<var>${final_xpath}</var>
-<arg>${xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.401952" elapsed="0.000230"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:10.401767" elapsed="0.000482"/>
-</branch>
-<branch type="ELSE">
-<kw name="Replace String" owner="String">
-<var>${final_replaced_xpath}</var>
-<arg>${xpath}</arg>
-<arg>KEY_PLACEHOLDER</arg>
-<arg>${key_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:10.402402" elapsed="0.000052"/>
-</kw>
-<kw name="Replace String" owner="String">
-<var>${final_xpath}</var>
-<arg>${final_replaced_xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:10.402548" elapsed="0.000061"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:10.402305" elapsed="0.000358"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:10.401749" elapsed="0.000960"/>
-</if>
-<return>
-<value>${final_xpath}</value>
-<status status="PASS" start="2025-08-03T16:50:10.402734" elapsed="0.000055"/>
-</return>
-<msg time="2025-08-03T16:50:10.402894" level="INFO">${buttton_xpath} = //button[@class="mfp-arrow mfp-arrow-left mfp-prevent-close"]</msg>
-<var>${buttton_xpath}</var>
-<arg>${GENERIC_BUTTON}</arg>
-<arg>${button_name}</arg>
-<doc>Keyword to create dynamic xpath replacing single string or two string</doc>
-<status status="PASS" start="2025-08-03T16:50:10.401255" elapsed="0.001699"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${buttton_xpath}</arg>
-<arg>timeout=${timeout_ten_seconds}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.403062" elapsed="0.007082"/>
-</kw>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${buttton_xpath}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.410520" elapsed="0.267402"/>
-</kw>
-<msg time="2025-08-03T16:50:10.678872" level="INFO">${status} = True</msg>
-<var>${status}</var>
-<arg>Scroll Element Into View</arg>
-<arg>${buttton_xpath}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.410346" elapsed="0.268763"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>${status}==${False}</arg>
-<arg>Repeat Keyword</arg>
-<arg>${retry_ten_times}</arg>
-<arg>Press Keys</arg>
-<arg>${None}</arg>
-<arg>PAGE_DOWN</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.679557" elapsed="0.000601"/>
-</kw>
-<try>
-<branch type="TRY">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:10.681224" level="INFO">Clicking element '//button[@class="mfp-arrow mfp-arrow-left mfp-prevent-close"]'.</msg>
-<arg>${buttton_xpath}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.680757" elapsed="0.048082"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:10.680466" elapsed="0.048558"/>
-</branch>
-<branch type="EXCEPT">
-<pattern>SeleniumLibrary.ElementNotFound</pattern>
-<kw name="Click Element Using Javascript Executor" owner="Common_Keywords">
-<arg>${buttton_xpath}</arg>
-<status status="NOT RUN" start="2025-08-03T16:50:10.729385" elapsed="0.000067"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:10.729129" elapsed="0.000388"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:10.680385" elapsed="0.049200"/>
-</try>
-<arg>${prev_class}</arg>
-<doc>Clicks the button with the specified name</doc>
-<status status="PASS" start="2025-08-03T16:50:10.400944" elapsed="0.328694"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:10.739157" level="INFO">Element '//img[@class="mfp-img"]' is displayed.</msg>
-<arg>${THUMBNAIL_IMG}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.729777" elapsed="0.009570"/>
-</kw>
-<doc>Verifies navigation to the next thumbnail</doc>
-<status status="PASS" start="2025-08-03T16:50:10.045181" elapsed="0.694281"/>
-</kw>
-<kw name="Capture Page Screenshot without Zoom" owner="Common_Keywords">
-<kw name="Get Current Date" owner="DateTime">
-<msg time="2025-08-03T16:50:10.740180" level="INFO">${timestamp} = 20250803165010</msg>
-<var>${timestamp}</var>
-<arg>result_format=%Y%m%d%H%M%S</arg>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.739952" elapsed="0.000296"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:10.944881" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Next_Prev_Thumbnail_20250803165010.png"&gt;&lt;img src="Next_Prev_Thumbnail_20250803165010.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-08-03T16:50:10.945096" level="INFO">${SCREENSHOT_PATH} = /Users/mac/Documents/RobotFramework/Next_Prev_Thumbnail_20250803165010.png</msg>
-<var>${SCREENSHOT_PATH}</var>
-<arg>${name}_${timestamp}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.740372" elapsed="0.204796"/>
-</kw>
-<return>
-<value>${SCREENSHOT_PATH}</value>
-<status status="PASS" start="2025-08-03T16:50:10.945263" elapsed="0.000079"/>
-</return>
-<arg>Next_Prev_Thumbnail</arg>
-<status status="PASS" start="2025-08-03T16:50:10.739674" elapsed="0.205777"/>
-</kw>
-<kw name="Click button_name" owner="Common_Keywords">
-<kw name="Create Dynamic Xpath" owner="Common_Keywords">
-<if>
-<branch type="IF" condition="${single_value_replacement}">
-<kw name="Replace String" owner="String">
-<msg time="2025-08-03T16:50:10.946763" level="INFO">${final_xpath} = //button[@class="mfp-close"]</msg>
-<var>${final_xpath}</var>
-<arg>${xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.946607" elapsed="0.000300"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:10.946430" elapsed="0.000545"/>
-</branch>
-<branch type="ELSE">
-<kw name="Replace String" owner="String">
-<var>${final_replaced_xpath}</var>
-<arg>${xpath}</arg>
-<arg>KEY_PLACEHOLDER</arg>
-<arg>${key_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:10.947131" elapsed="0.000053"/>
-</kw>
-<kw name="Replace String" owner="String">
-<var>${final_xpath}</var>
-<arg>${final_replaced_xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:10.947281" elapsed="0.000049"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:10.947030" elapsed="0.000351"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:10.946414" elapsed="0.001015"/>
-</if>
-<return>
-<value>${final_xpath}</value>
-<status status="PASS" start="2025-08-03T16:50:10.947453" elapsed="0.000051"/>
-</return>
-<msg time="2025-08-03T16:50:10.947608" level="INFO">${buttton_xpath} = //button[@class="mfp-close"]</msg>
-<var>${buttton_xpath}</var>
-<arg>${GENERIC_BUTTON}</arg>
-<arg>${button_name}</arg>
-<doc>Keyword to create dynamic xpath replacing single string or two string</doc>
-<status status="PASS" start="2025-08-03T16:50:10.945929" elapsed="0.001738"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${buttton_xpath}</arg>
-<arg>timeout=${timeout_ten_seconds}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.947828" elapsed="0.007101"/>
-</kw>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${buttton_xpath}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.955302" elapsed="0.262174"/>
-</kw>
-<msg time="2025-08-03T16:50:11.217914" level="INFO">${status} = True</msg>
-<var>${status}</var>
-<arg>Scroll Element Into View</arg>
-<arg>${buttton_xpath}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-08-03T16:50:10.955121" elapsed="0.262926"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>${status}==${False}</arg>
-<arg>Repeat Keyword</arg>
-<arg>${retry_ten_times}</arg>
-<arg>Press Keys</arg>
-<arg>${None}</arg>
-<arg>PAGE_DOWN</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.218311" elapsed="0.000403"/>
-</kw>
-<try>
-<branch type="TRY">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:11.219409" level="INFO">Clicking element '//button[@class="mfp-close"]'.</msg>
-<arg>${buttton_xpath}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.219126" elapsed="0.041121"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:11.218931" elapsed="0.041446"/>
-</branch>
-<branch type="EXCEPT">
-<pattern>SeleniumLibrary.ElementNotFound</pattern>
-<kw name="Click Element Using Javascript Executor" owner="Common_Keywords">
-<arg>${buttton_xpath}</arg>
-<status status="NOT RUN" start="2025-08-03T16:50:11.260655" elapsed="0.000063"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:11.260463" elapsed="0.000312"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:11.218868" elapsed="0.041966"/>
-</try>
-<arg>${close_class}</arg>
-<doc>Clicks the button with the specified name</doc>
-<status status="PASS" start="2025-08-03T16:50:10.945653" elapsed="0.315223"/>
-</kw>
-<kw name=" Verify focus is on display Page" owner="Product_Display_Keywords">
-<kw name="Create Dynamic Xpath" owner="Common_Keywords">
-<if>
-<branch type="IF" condition="${single_value_replacement}">
-<kw name="Replace String" owner="String">
-<msg time="2025-08-03T16:50:11.262142" level="INFO">${final_xpath} = //button[@class="$value_to_replace=mfp-close"]</msg>
-<var>${final_xpath}</var>
-<arg>${xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.261983" elapsed="0.000242"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:11.261803" elapsed="0.000485"/>
-</branch>
-<branch type="ELSE">
-<kw name="Replace String" owner="String">
-<var>${final_replaced_xpath}</var>
-<arg>${xpath}</arg>
-<arg>KEY_PLACEHOLDER</arg>
-<arg>${key_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:11.262438" elapsed="0.000051"/>
-</kw>
-<kw name="Replace String" owner="String">
-<var>${final_xpath}</var>
-<arg>${final_replaced_xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:11.262582" elapsed="0.000050"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:11.262341" elapsed="0.000341"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:11.261787" elapsed="0.000941"/>
-</if>
-<return>
-<value>${final_xpath}</value>
-<status status="PASS" start="2025-08-03T16:50:11.262752" elapsed="0.000055"/>
-</return>
-<msg time="2025-08-03T16:50:11.262908" level="INFO">${CLOSE_BTN} = //button[@class="$value_to_replace=mfp-close"]</msg>
-<var>${CLOSE_BTN}</var>
-<arg>${GENERIC_BUTTON}</arg>
-<arg>$value_to_replace=${close_class}</arg>
-<doc>Keyword to create dynamic xpath replacing single string or two string</doc>
-<status status="PASS" start="2025-08-03T16:50:11.261266" elapsed="0.001699"/>
-</kw>
-<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:11.271447" level="INFO">Element '//button[@class="$value_to_replace=mfp-close"]' did not exist.</msg>
-<arg>${CLOSE_BTN}</arg>
-<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.263070" elapsed="0.008585"/>
-</kw>
-<doc>Verifies that the focus is on the display page after clicking on close</doc>
-<status status="PASS" start="2025-08-03T16:50:11.260998" elapsed="0.010761"/>
-</kw>
-<kw name="Capture Page Screenshot without Zoom" owner="Common_Keywords">
-<kw name="Get Current Date" owner="DateTime">
-<msg time="2025-08-03T16:50:11.272362" level="INFO">${timestamp} = 20250803165011</msg>
-<var>${timestamp}</var>
-<arg>result_format=%Y%m%d%H%M%S</arg>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.272182" elapsed="0.000242"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:11.453655" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Focus_Display_Page_20250803165011.png"&gt;&lt;img src="Focus_Display_Page_20250803165011.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-08-03T16:50:11.453868" level="INFO">${SCREENSHOT_PATH} = /Users/mac/Documents/RobotFramework/Focus_Display_Page_20250803165011.png</msg>
-<var>${SCREENSHOT_PATH}</var>
-<arg>${name}_${timestamp}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.272533" elapsed="0.181408"/>
-</kw>
-<return>
-<value>${SCREENSHOT_PATH}</value>
-<status status="PASS" start="2025-08-03T16:50:11.454035" elapsed="0.000076"/>
-</return>
-<arg>Focus_Display_Page</arg>
-<status status="PASS" start="2025-08-03T16:50:11.271937" elapsed="0.182279"/>
-</kw>
-<kw name="Wait for Specified timeout" owner="Common_Keywords">
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
-<kw name="//h1[@class='dummy']">
-<msg time="2025-08-03T16:50:11.456504" level="FAIL">No keyword with name '//h1[@class='dummy']' found.</msg>
-<arg>${timeout}</arg>
-<status status="FAIL" start="2025-08-03T16:50:11.456416" elapsed="0.000150">No keyword with name '//h1[@class='dummy']' found.</status>
-</kw>
-<arg>${DUMMY_LOC}</arg>
-<arg>${timeout}</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.454600" elapsed="0.002041"/>
-</kw>
-<arg>${timeout_five_seconds}</arg>
-<status status="PASS" start="2025-08-03T16:50:11.454365" elapsed="0.002344"/>
-</kw>
-<var name="${counter}">1</var>
-<status status="PASS" start="2025-08-03T16:50:09.794063" elapsed="1.662696"/>
-</iter>
-<iter>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-08-03T16:50:11.457145" level="INFO">(//ul[@class="thumbnails"]//li)[{index}]</msg>
-<arg>${PRODUCT_DISPLAY_THUMBNAIL}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.457022" elapsed="0.000332"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-08-03T16:50:11.457841" level="INFO">/</msg>
-<arg>${PRODUCT_DISPLAY_THUMBNAIL}[${counter}]</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.457634" elapsed="0.000299"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-08-03T16:50:11.458582" level="INFO">${xpath} = (//ul[@class="thumbnails"]//li)[2]</msg>
-<var>${xpath}</var>
-<arg>${PRODUCT_DISPLAY_THUMBNAIL.replace('{index}', str(${counter}))}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.458096" elapsed="0.000555"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-08-03T16:50:11.458890" level="INFO">Clicking: (//ul[@class="thumbnails"]//li)[2]</msg>
-<arg>Clicking: ${xpath}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.458780" elapsed="0.000183"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:11.459235" level="INFO">Clicking element '(//ul[@class="thumbnails"]//li)[2]'.</msg>
-<arg>${xpath}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.459068" elapsed="0.038755"/>
-</kw>
-<kw name="Verify color of thumbnail white box" owner="Product_Display_Keywords">
-<kw name="Get CSS Property Value" owner="Key_Login_Keywords">
-<kw name="Get WebElement" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:11.508365" level="INFO">${css} = &lt;selenium.webdriver.remote.webelement.WebElement (session="e43c0cfb8046dd04c8052bad86753a2a", element="f.3EBD1C1408B6FA1D519F97E0FC9E8A4C.d.7D978EC3E4BB253A9CD6082FB281628E.e.113")&gt;</msg>
-<var>${css}</var>
-<arg>${locator}</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.498615" elapsed="0.009880"/>
-</kw>
-<kw name="Call Method" owner="BuiltIn">
-<msg time="2025-08-03T16:50:11.513891" level="INFO">${prop_val} = rgba(0, 0, 0, 0)</msg>
-<var>${prop_val}</var>
-<arg>${css}</arg>
-<arg>value_of_css_property</arg>
-<arg>${attribute name}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.508661" elapsed="0.005342"/>
-</kw>
-<return>
-<value>${prop_val}</value>
-<status status="PASS" start="2025-08-03T16:50:11.514109" elapsed="0.000082"/>
-</return>
-<msg time="2025-08-03T16:50:11.514316" level="INFO">${color} = rgba(0, 0, 0, 0)</msg>
-<var>${color}</var>
-<arg>${THUMBNAIL_WHITE_BOX}</arg>
-<arg>${backgroundColor}</arg>
-<doc>Get the CSS property value of an element</doc>
-<status status="PASS" start="2025-08-03T16:50:11.498378" elapsed="0.015994"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-08-03T16:50:11.514683" level="INFO">rgba(0, 0, 0, 0):0, 0, 0, 0</msg>
-<arg>${color}:${expected_color}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.514512" elapsed="0.000246"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${color}</arg>
-<arg>${expected_color}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.514863" elapsed="0.000138"/>
-</kw>
-<arg>${thumbnail_color}</arg>
-<doc>Verifies the color of the thumbnail white box</doc>
-<status status="PASS" start="2025-08-03T16:50:11.498082" elapsed="0.016986"/>
-</kw>
-<kw name="Wait for Specified timeout" owner="Common_Keywords">
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
-<kw name="//h1[@class='dummy']">
-<msg time="2025-08-03T16:50:11.517484" level="FAIL">No keyword with name '//h1[@class='dummy']' found.</msg>
-<arg>${timeout}</arg>
-<status status="FAIL" start="2025-08-03T16:50:11.517351" elapsed="0.000216">No keyword with name '//h1[@class='dummy']' found.</status>
-</kw>
-<arg>${DUMMY_LOC}</arg>
-<arg>${timeout}</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.515390" elapsed="0.002264"/>
-</kw>
-<arg>${timeout_ten_seconds}</arg>
-<status status="PASS" start="2025-08-03T16:50:11.515189" elapsed="0.002544"/>
-</kw>
-<kw name="Capture Page Screenshot without Zoom" owner="Common_Keywords">
-<kw name="Get Current Date" owner="DateTime">
-<msg time="2025-08-03T16:50:11.518326" level="INFO">${timestamp} = 20250803165011</msg>
-<var>${timestamp}</var>
-<arg>result_format=%Y%m%d%H%M%S</arg>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.518144" elapsed="0.000248"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:11.681362" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Thumbnail_white_box_20250803165011.png"&gt;&lt;img src="Thumbnail_white_box_20250803165011.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-08-03T16:50:11.681571" level="INFO">${SCREENSHOT_PATH} = /Users/mac/Documents/RobotFramework/Thumbnail_white_box_20250803165011.png</msg>
-<var>${SCREENSHOT_PATH}</var>
-<arg>${name}_${timestamp}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.518502" elapsed="0.163128"/>
-</kw>
-<return>
-<value>${SCREENSHOT_PATH}</value>
-<status status="PASS" start="2025-08-03T16:50:11.681717" elapsed="0.000086"/>
-</return>
-<arg>Thumbnail_white_box</arg>
-<status status="PASS" start="2025-08-03T16:50:11.517911" elapsed="0.163997"/>
-</kw>
-<kw name="Verify navigation to next and prev thumbnail" owner="Product_Display_Keywords">
-<kw name="Click button_name" owner="Common_Keywords">
-<kw name="Create Dynamic Xpath" owner="Common_Keywords">
-<if>
-<branch type="IF" condition="${single_value_replacement}">
-<kw name="Replace String" owner="String">
-<msg time="2025-08-03T16:50:11.683896" level="INFO">${final_xpath} = //button[@class="mfp-arrow mfp-arrow-right mfp-prevent-close"]</msg>
-<var>${final_xpath}</var>
-<arg>${xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.683719" elapsed="0.000284"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:11.683524" elapsed="0.000566"/>
-</branch>
-<branch type="ELSE">
-<kw name="Replace String" owner="String">
-<var>${final_replaced_xpath}</var>
-<arg>${xpath}</arg>
-<arg>KEY_PLACEHOLDER</arg>
-<arg>${key_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:11.684257" elapsed="0.000057"/>
-</kw>
-<kw name="Replace String" owner="String">
-<var>${final_xpath}</var>
-<arg>${final_replaced_xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:11.684417" elapsed="0.000050"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:11.684153" elapsed="0.000464"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:11.683506" elapsed="0.001225"/>
-</if>
-<return>
-<value>${final_xpath}</value>
-<status status="PASS" start="2025-08-03T16:50:11.684770" elapsed="0.000077"/>
-</return>
-<msg time="2025-08-03T16:50:11.685002" level="INFO">${buttton_xpath} = //button[@class="mfp-arrow mfp-arrow-right mfp-prevent-close"]</msg>
-<var>${buttton_xpath}</var>
-<arg>${GENERIC_BUTTON}</arg>
-<arg>${button_name}</arg>
-<doc>Keyword to create dynamic xpath replacing single string or two string</doc>
-<status status="PASS" start="2025-08-03T16:50:11.682944" elapsed="0.002167"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${buttton_xpath}</arg>
-<arg>timeout=${timeout_ten_seconds}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.685278" elapsed="0.004849"/>
-</kw>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${buttton_xpath}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.690473" elapsed="0.261304"/>
-</kw>
-<msg time="2025-08-03T16:50:11.952212" level="INFO">${status} = True</msg>
-<var>${status}</var>
-<arg>Scroll Element Into View</arg>
-<arg>${buttton_xpath}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.690306" elapsed="0.262034"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>${status}==${False}</arg>
-<arg>Repeat Keyword</arg>
-<arg>${retry_ten_times}</arg>
-<arg>Press Keys</arg>
-<arg>${None}</arg>
-<arg>PAGE_DOWN</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.952701" elapsed="0.000523"/>
-</kw>
-<try>
-<branch type="TRY">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:11.954069" level="INFO">Clicking element '//button[@class="mfp-arrow mfp-arrow-right mfp-prevent-close"]'.</msg>
-<arg>${buttton_xpath}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.953720" elapsed="0.039700"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:11.953483" elapsed="0.040094"/>
-</branch>
-<branch type="EXCEPT">
-<pattern>SeleniumLibrary.ElementNotFound</pattern>
-<kw name="Click Element Using Javascript Executor" owner="Common_Keywords">
-<arg>${buttton_xpath}</arg>
-<status status="NOT RUN" start="2025-08-03T16:50:11.994034" elapsed="0.000082"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:11.993734" elapsed="0.000453"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:11.953416" elapsed="0.040837"/>
-</try>
-<arg>${next_class}</arg>
-<doc>Clicks the button with the specified name</doc>
-<status status="PASS" start="2025-08-03T16:50:11.682585" elapsed="0.311715"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:12.002580" level="INFO">Element '//img[@class="mfp-img"]' is displayed.</msg>
-<arg>${THUMBNAIL_IMG}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-03T16:50:11.994417" elapsed="0.008329"/>
-</kw>
-<kw name="Click button_name" owner="Common_Keywords">
-<kw name="Create Dynamic Xpath" owner="Common_Keywords">
-<if>
-<branch type="IF" condition="${single_value_replacement}">
-<kw name="Replace String" owner="String">
-<msg time="2025-08-03T16:50:12.004186" level="INFO">${final_xpath} = //button[@class="mfp-arrow mfp-arrow-left mfp-prevent-close"]</msg>
-<var>${final_xpath}</var>
-<arg>${xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.004016" elapsed="0.000237"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:12.003826" elapsed="0.000495"/>
-</branch>
-<branch type="ELSE">
-<kw name="Replace String" owner="String">
-<var>${final_replaced_xpath}</var>
-<arg>${xpath}</arg>
-<arg>KEY_PLACEHOLDER</arg>
-<arg>${key_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:12.004479" elapsed="0.000056"/>
-</kw>
-<kw name="Replace String" owner="String">
-<var>${final_xpath}</var>
-<arg>${final_replaced_xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:12.004632" elapsed="0.000048"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:12.004381" elapsed="0.000355"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:12.003808" elapsed="0.000975"/>
-</if>
-<return>
-<value>${final_xpath}</value>
-<status status="PASS" start="2025-08-03T16:50:12.004807" elapsed="0.000056"/>
-</return>
-<msg time="2025-08-03T16:50:12.004968" level="INFO">${buttton_xpath} = //button[@class="mfp-arrow mfp-arrow-left mfp-prevent-close"]</msg>
-<var>${buttton_xpath}</var>
-<arg>${GENERIC_BUTTON}</arg>
-<arg>${button_name}</arg>
-<doc>Keyword to create dynamic xpath replacing single string or two string</doc>
-<status status="PASS" start="2025-08-03T16:50:12.003296" elapsed="0.001726"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${buttton_xpath}</arg>
-<arg>timeout=${timeout_ten_seconds}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.005135" elapsed="0.004945"/>
-</kw>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${buttton_xpath}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.010440" elapsed="0.264599"/>
-</kw>
-<msg time="2025-08-03T16:50:12.275227" level="INFO">${status} = True</msg>
-<var>${status}</var>
-<arg>Scroll Element Into View</arg>
-<arg>${buttton_xpath}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.010265" elapsed="0.265028"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>${status}==${False}</arg>
-<arg>Repeat Keyword</arg>
-<arg>${retry_ten_times}</arg>
-<arg>Press Keys</arg>
-<arg>${None}</arg>
-<arg>PAGE_DOWN</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.275456" elapsed="0.000248"/>
-</kw>
-<try>
-<branch type="TRY">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:12.276149" level="INFO">Clicking element '//button[@class="mfp-arrow mfp-arrow-left mfp-prevent-close"]'.</msg>
-<arg>${buttton_xpath}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.275964" elapsed="0.032792"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:12.275833" elapsed="0.033058"/>
-</branch>
-<branch type="EXCEPT">
-<pattern>SeleniumLibrary.ElementNotFound</pattern>
-<kw name="Click Element Using Javascript Executor" owner="Common_Keywords">
-<arg>${buttton_xpath}</arg>
-<status status="NOT RUN" start="2025-08-03T16:50:12.309162" elapsed="0.000060"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:12.308974" elapsed="0.000307"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:12.275801" elapsed="0.033537"/>
-</try>
-<arg>${prev_class}</arg>
-<doc>Clicks the button with the specified name</doc>
-<status status="PASS" start="2025-08-03T16:50:12.002984" elapsed="0.306393"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:12.317620" level="INFO">Element '//img[@class="mfp-img"]' is displayed.</msg>
-<arg>${THUMBNAIL_IMG}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.309492" elapsed="0.008290"/>
-</kw>
-<doc>Verifies navigation to the next thumbnail</doc>
-<status status="PASS" start="2025-08-03T16:50:11.682067" elapsed="0.635939"/>
-</kw>
-<kw name="Capture Page Screenshot without Zoom" owner="Common_Keywords">
-<kw name="Get Current Date" owner="DateTime">
-<msg time="2025-08-03T16:50:12.318782" level="INFO">${timestamp} = 20250803165012</msg>
-<var>${timestamp}</var>
-<arg>result_format=%Y%m%d%H%M%S</arg>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.318522" elapsed="0.000345"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:12.479852" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Next_Prev_Thumbnail_20250803165012.png"&gt;&lt;img src="Next_Prev_Thumbnail_20250803165012.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-08-03T16:50:12.480096" level="INFO">${SCREENSHOT_PATH} = /Users/mac/Documents/RobotFramework/Next_Prev_Thumbnail_20250803165012.png</msg>
-<var>${SCREENSHOT_PATH}</var>
-<arg>${name}_${timestamp}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.318993" elapsed="0.161172"/>
-</kw>
-<return>
-<value>${SCREENSHOT_PATH}</value>
-<status status="PASS" start="2025-08-03T16:50:12.480268" elapsed="0.000086"/>
-</return>
-<arg>Next_Prev_Thumbnail</arg>
-<status status="PASS" start="2025-08-03T16:50:12.318189" elapsed="0.162281"/>
-</kw>
-<kw name="Click button_name" owner="Common_Keywords">
-<kw name="Create Dynamic Xpath" owner="Common_Keywords">
-<if>
-<branch type="IF" condition="${single_value_replacement}">
-<kw name="Replace String" owner="String">
-<msg time="2025-08-03T16:50:12.481807" level="INFO">${final_xpath} = //button[@class="mfp-close"]</msg>
-<var>${final_xpath}</var>
-<arg>${xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.481651" elapsed="0.000216"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:12.481477" elapsed="0.000451"/>
-</branch>
-<branch type="ELSE">
-<kw name="Replace String" owner="String">
-<var>${final_replaced_xpath}</var>
-<arg>${xpath}</arg>
-<arg>KEY_PLACEHOLDER</arg>
-<arg>${key_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:12.482076" elapsed="0.000053"/>
-</kw>
-<kw name="Replace String" owner="String">
-<var>${final_xpath}</var>
-<arg>${final_replaced_xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:12.482250" elapsed="0.000050"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:12.481981" elapsed="0.000373"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:12.481460" elapsed="0.000939"/>
-</if>
-<return>
-<value>${final_xpath}</value>
-<status status="PASS" start="2025-08-03T16:50:12.482422" elapsed="0.000047"/>
-</return>
-<msg time="2025-08-03T16:50:12.482567" level="INFO">${buttton_xpath} = //button[@class="mfp-close"]</msg>
-<var>${buttton_xpath}</var>
-<arg>${GENERIC_BUTTON}</arg>
-<arg>${button_name}</arg>
-<doc>Keyword to create dynamic xpath replacing single string or two string</doc>
-<status status="PASS" start="2025-08-03T16:50:12.480969" elapsed="0.001654"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${buttton_xpath}</arg>
-<arg>timeout=${timeout_ten_seconds}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.482728" elapsed="0.004688"/>
-</kw>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${buttton_xpath}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.487760" elapsed="0.265459"/>
-</kw>
-<msg time="2025-08-03T16:50:12.753612" level="INFO">${status} = True</msg>
-<var>${status}</var>
-<arg>Scroll Element Into View</arg>
-<arg>${buttton_xpath}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.487592" elapsed="0.266143"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>${status}==${False}</arg>
-<arg>Repeat Keyword</arg>
-<arg>${retry_ten_times}</arg>
-<arg>Press Keys</arg>
-<arg>${None}</arg>
-<arg>PAGE_DOWN</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.754045" elapsed="0.000470"/>
-</kw>
-<try>
-<branch type="TRY">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:12.755284" level="INFO">Clicking element '//button[@class="mfp-close"]'.</msg>
-<arg>${buttton_xpath}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.754963" elapsed="0.036175"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:12.754747" elapsed="0.036516"/>
-</branch>
-<branch type="EXCEPT">
-<pattern>SeleniumLibrary.ElementNotFound</pattern>
-<kw name="Click Element Using Javascript Executor" owner="Common_Keywords">
-<arg>${buttton_xpath}</arg>
-<status status="NOT RUN" start="2025-08-03T16:50:12.791535" elapsed="0.000061"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:12.791348" elapsed="0.000307"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:12.754681" elapsed="0.037033"/>
-</try>
-<arg>${close_class}</arg>
-<doc>Clicks the button with the specified name</doc>
-<status status="PASS" start="2025-08-03T16:50:12.480688" elapsed="0.311065"/>
-</kw>
-<kw name=" Verify focus is on display Page" owner="Product_Display_Keywords">
-<kw name="Create Dynamic Xpath" owner="Common_Keywords">
-<if>
-<branch type="IF" condition="${single_value_replacement}">
-<kw name="Replace String" owner="String">
-<msg time="2025-08-03T16:50:12.792986" level="INFO">${final_xpath} = //button[@class="$value_to_replace=mfp-close"]</msg>
-<var>${final_xpath}</var>
-<arg>${xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.792829" elapsed="0.000231"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:12.792661" elapsed="0.000459"/>
-</branch>
-<branch type="ELSE">
-<kw name="Replace String" owner="String">
-<var>${final_replaced_xpath}</var>
-<arg>${xpath}</arg>
-<arg>KEY_PLACEHOLDER</arg>
-<arg>${key_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:12.793268" elapsed="0.000051"/>
-</kw>
-<kw name="Replace String" owner="String">
-<var>${final_xpath}</var>
-<arg>${final_replaced_xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:12.793412" elapsed="0.000049"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:12.793174" elapsed="0.000338"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:12.792645" elapsed="0.000913"/>
-</if>
-<return>
-<value>${final_xpath}</value>
-<status status="PASS" start="2025-08-03T16:50:12.793581" elapsed="0.000054"/>
-</return>
-<msg time="2025-08-03T16:50:12.793734" level="INFO">${CLOSE_BTN} = //button[@class="$value_to_replace=mfp-close"]</msg>
-<var>${CLOSE_BTN}</var>
-<arg>${GENERIC_BUTTON}</arg>
-<arg>$value_to_replace=${close_class}</arg>
-<doc>Keyword to create dynamic xpath replacing single string or two string</doc>
-<status status="PASS" start="2025-08-03T16:50:12.792136" elapsed="0.001653"/>
-</kw>
-<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:12.798619" level="INFO">Element '//button[@class="$value_to_replace=mfp-close"]' did not exist.</msg>
-<arg>${CLOSE_BTN}</arg>
-<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.793891" elapsed="0.005042"/>
-</kw>
-<doc>Verifies that the focus is on the display page after clicking on close</doc>
-<status status="PASS" start="2025-08-03T16:50:12.791880" elapsed="0.007585"/>
-</kw>
-<kw name="Capture Page Screenshot without Zoom" owner="Common_Keywords">
-<kw name="Get Current Date" owner="DateTime">
-<msg time="2025-08-03T16:50:12.800297" level="INFO">${timestamp} = 20250803165012</msg>
-<var>${timestamp}</var>
-<arg>result_format=%Y%m%d%H%M%S</arg>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.800066" elapsed="0.000313"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:12.976676" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Focus_Display_Page_20250803165012.png"&gt;&lt;img src="Focus_Display_Page_20250803165012.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-08-03T16:50:12.976881" level="INFO">${SCREENSHOT_PATH} = /Users/mac/Documents/RobotFramework/Focus_Display_Page_20250803165012.png</msg>
-<var>${SCREENSHOT_PATH}</var>
-<arg>${name}_${timestamp}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.800503" elapsed="0.176440"/>
-</kw>
-<return>
-<value>${SCREENSHOT_PATH}</value>
-<status status="PASS" start="2025-08-03T16:50:12.977033" elapsed="0.000077"/>
-</return>
-<arg>Focus_Display_Page</arg>
-<status status="PASS" start="2025-08-03T16:50:12.799778" elapsed="0.177441"/>
-</kw>
-<kw name="Wait for Specified timeout" owner="Common_Keywords">
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
-<kw name="//h1[@class='dummy']">
-<msg time="2025-08-03T16:50:12.979306" level="FAIL">No keyword with name '//h1[@class='dummy']' found.</msg>
-<arg>${timeout}</arg>
-<status status="FAIL" start="2025-08-03T16:50:12.979245" elapsed="0.000113">No keyword with name '//h1[@class='dummy']' found.</status>
-</kw>
-<arg>${DUMMY_LOC}</arg>
-<arg>${timeout}</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.977611" elapsed="0.001813"/>
-</kw>
-<arg>${timeout_five_seconds}</arg>
-<status status="PASS" start="2025-08-03T16:50:12.977372" elapsed="0.002112"/>
-</kw>
-<var name="${counter}">2</var>
-<status status="PASS" start="2025-08-03T16:50:11.456908" elapsed="1.522623"/>
-</iter>
-<iter>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-08-03T16:50:12.979873" level="INFO">(//ul[@class="thumbnails"]//li)[{index}]</msg>
-<arg>${PRODUCT_DISPLAY_THUMBNAIL}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.979762" elapsed="0.000179"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-08-03T16:50:12.980151" level="INFO">u</msg>
-<arg>${PRODUCT_DISPLAY_THUMBNAIL}[${counter}]</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.980035" elapsed="0.000181"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-08-03T16:50:12.980741" level="INFO">${xpath} = (//ul[@class="thumbnails"]//li)[3]</msg>
-<var>${xpath}</var>
-<arg>${PRODUCT_DISPLAY_THUMBNAIL.replace('{index}', str(${counter}))}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.980309" elapsed="0.000490"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-08-03T16:50:12.980998" level="INFO">Clicking: (//ul[@class="thumbnails"]//li)[3]</msg>
-<arg>Clicking: ${xpath}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.980896" elapsed="0.000165"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:12.981298" level="INFO">Clicking element '(//ul[@class="thumbnails"]//li)[3]'.</msg>
-<arg>${xpath}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-03T16:50:12.981158" elapsed="0.037720"/>
-</kw>
-<kw name="Verify color of thumbnail white box" owner="Product_Display_Keywords">
-<kw name="Get CSS Property Value" owner="Key_Login_Keywords">
-<kw name="Get WebElement" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:13.050550" level="INFO">${css} = &lt;selenium.webdriver.remote.webelement.WebElement (session="e43c0cfb8046dd04c8052bad86753a2a", element="f.3EBD1C1408B6FA1D519F97E0FC9E8A4C.d.7D978EC3E4BB253A9CD6082FB281628E.e.113")&gt;</msg>
-<var>${css}</var>
-<arg>${locator}</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.019735" elapsed="0.031090"/>
-</kw>
-<kw name="Call Method" owner="BuiltIn">
-<msg time="2025-08-03T16:50:13.055131" level="INFO">${prop_val} = rgba(0, 0, 0, 0)</msg>
-<var>${prop_val}</var>
-<arg>${css}</arg>
-<arg>value_of_css_property</arg>
-<arg>${attribute name}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.051053" elapsed="0.004184"/>
-</kw>
-<return>
-<value>${prop_val}</value>
-<status status="PASS" start="2025-08-03T16:50:13.055330" elapsed="0.000097"/>
-</return>
-<msg time="2025-08-03T16:50:13.055594" level="INFO">${color} = rgba(0, 0, 0, 0)</msg>
-<var>${color}</var>
-<arg>${THUMBNAIL_WHITE_BOX}</arg>
-<arg>${backgroundColor}</arg>
-<doc>Get the CSS property value of an element</doc>
-<status status="PASS" start="2025-08-03T16:50:13.019508" elapsed="0.036152"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-08-03T16:50:13.055957" level="INFO">rgba(0, 0, 0, 0):0, 0, 0, 0</msg>
-<arg>${color}:${expected_color}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.055799" elapsed="0.000228"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${color}</arg>
-<arg>${expected_color}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.056127" elapsed="0.000131"/>
-</kw>
-<arg>${thumbnail_color}</arg>
-<doc>Verifies the color of the thumbnail white box</doc>
-<status status="PASS" start="2025-08-03T16:50:13.019218" elapsed="0.037110"/>
-</kw>
-<kw name="Wait for Specified timeout" owner="Common_Keywords">
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
-<kw name="//h1[@class='dummy']">
-<msg time="2025-08-03T16:50:13.060455" level="FAIL">No keyword with name '//h1[@class='dummy']' found.</msg>
-<arg>${timeout}</arg>
-<status status="FAIL" start="2025-08-03T16:50:13.060332" elapsed="0.000203">No keyword with name '//h1[@class='dummy']' found.</status>
-</kw>
-<arg>${DUMMY_LOC}</arg>
-<arg>${timeout}</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.056659" elapsed="0.003957"/>
-</kw>
-<arg>${timeout_ten_seconds}</arg>
-<status status="PASS" start="2025-08-03T16:50:13.056451" elapsed="0.004238"/>
-</kw>
-<kw name="Capture Page Screenshot without Zoom" owner="Common_Keywords">
-<kw name="Get Current Date" owner="DateTime">
-<msg time="2025-08-03T16:50:13.065384" level="INFO">${timestamp} = 20250803165013</msg>
-<var>${timestamp}</var>
-<arg>result_format=%Y%m%d%H%M%S</arg>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.064649" elapsed="0.001227"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:13.246767" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Thumbnail_white_box_20250803165013.png"&gt;&lt;img src="Thumbnail_white_box_20250803165013.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-08-03T16:50:13.246975" level="INFO">${SCREENSHOT_PATH} = /Users/mac/Documents/RobotFramework/Thumbnail_white_box_20250803165013.png</msg>
-<var>${SCREENSHOT_PATH}</var>
-<arg>${name}_${timestamp}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.066147" elapsed="0.180995"/>
-</kw>
-<return>
-<value>${SCREENSHOT_PATH}</value>
-<status status="PASS" start="2025-08-03T16:50:13.247238" elapsed="0.000079"/>
-</return>
-<arg>Thumbnail_white_box</arg>
-<status status="PASS" start="2025-08-03T16:50:13.064175" elapsed="0.183249"/>
-</kw>
-<kw name="Verify navigation to next and prev thumbnail" owner="Product_Display_Keywords">
-<kw name="Click button_name" owner="Common_Keywords">
-<kw name="Create Dynamic Xpath" owner="Common_Keywords">
-<if>
-<branch type="IF" condition="${single_value_replacement}">
-<kw name="Replace String" owner="String">
-<msg time="2025-08-03T16:50:13.249252" level="INFO">${final_xpath} = //button[@class="mfp-arrow mfp-arrow-right mfp-prevent-close"]</msg>
-<var>${final_xpath}</var>
-<arg>${xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.249073" elapsed="0.000272"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:13.248882" elapsed="0.000545"/>
-</branch>
-<branch type="ELSE">
-<kw name="Replace String" owner="String">
-<var>${final_replaced_xpath}</var>
-<arg>${xpath}</arg>
-<arg>KEY_PLACEHOLDER</arg>
-<arg>${key_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:13.249586" elapsed="0.000061"/>
-</kw>
-<kw name="Replace String" owner="String">
-<var>${final_xpath}</var>
-<arg>${final_replaced_xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:13.249750" elapsed="0.000052"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:13.249484" elapsed="0.000375"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:13.248864" elapsed="0.001044"/>
-</if>
-<return>
-<value>${final_xpath}</value>
-<status status="PASS" start="2025-08-03T16:50:13.249932" elapsed="0.000056"/>
-</return>
-<msg time="2025-08-03T16:50:13.250099" level="INFO">${buttton_xpath} = //button[@class="mfp-arrow mfp-arrow-right mfp-prevent-close"]</msg>
-<var>${buttton_xpath}</var>
-<arg>${GENERIC_BUTTON}</arg>
-<arg>${button_name}</arg>
-<doc>Keyword to create dynamic xpath replacing single string or two string</doc>
-<status status="PASS" start="2025-08-03T16:50:13.248350" elapsed="0.001805"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${buttton_xpath}</arg>
-<arg>timeout=${timeout_ten_seconds}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.250270" elapsed="0.005096"/>
-</kw>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${buttton_xpath}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.255686" elapsed="0.267640"/>
-</kw>
-<msg time="2025-08-03T16:50:13.524073" level="INFO">${status} = True</msg>
-<var>${status}</var>
-<arg>Scroll Element Into View</arg>
-<arg>${buttton_xpath}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.255525" elapsed="0.268798"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>${status}==${False}</arg>
-<arg>Repeat Keyword</arg>
-<arg>${retry_ten_times}</arg>
-<arg>Press Keys</arg>
-<arg>${None}</arg>
-<arg>PAGE_DOWN</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.524891" elapsed="0.000906"/>
-</kw>
-<try>
-<branch type="TRY">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:13.527060" level="INFO">Clicking element '//button[@class="mfp-arrow mfp-arrow-right mfp-prevent-close"]'.</msg>
-<arg>${buttton_xpath}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.526580" elapsed="0.043365"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:13.526190" elapsed="0.043905"/>
-</branch>
-<branch type="EXCEPT">
-<pattern>SeleniumLibrary.ElementNotFound</pattern>
-<kw name="Click Element Using Javascript Executor" owner="Common_Keywords">
-<arg>${buttton_xpath}</arg>
-<status status="NOT RUN" start="2025-08-03T16:50:13.570426" elapsed="0.000064"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:13.570192" elapsed="0.000360"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:13.526103" elapsed="0.044508"/>
-</try>
-<arg>${next_class}</arg>
-<doc>Clicks the button with the specified name</doc>
-<status status="PASS" start="2025-08-03T16:50:13.247978" elapsed="0.322687"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:13.579684" level="INFO">Element '//img[@class="mfp-img"]' is displayed.</msg>
-<arg>${THUMBNAIL_IMG}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.570797" elapsed="0.009073"/>
-</kw>
-<kw name="Click button_name" owner="Common_Keywords">
-<kw name="Create Dynamic Xpath" owner="Common_Keywords">
-<if>
-<branch type="IF" condition="${single_value_replacement}">
-<kw name="Replace String" owner="String">
-<msg time="2025-08-03T16:50:13.581341" level="INFO">${final_xpath} = //button[@class="mfp-arrow mfp-arrow-left mfp-prevent-close"]</msg>
-<var>${final_xpath}</var>
-<arg>${xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.581170" elapsed="0.000236"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:13.580977" elapsed="0.000494"/>
-</branch>
-<branch type="ELSE">
-<kw name="Replace String" owner="String">
-<var>${final_replaced_xpath}</var>
-<arg>${xpath}</arg>
-<arg>KEY_PLACEHOLDER</arg>
-<arg>${key_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:13.581622" elapsed="0.000052"/>
-</kw>
-<kw name="Replace String" owner="String">
-<var>${final_xpath}</var>
-<arg>${final_replaced_xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:13.581770" elapsed="0.000051"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:13.581526" elapsed="0.000347"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:13.580956" elapsed="0.000963"/>
-</if>
-<return>
-<value>${final_xpath}</value>
-<status status="PASS" start="2025-08-03T16:50:13.581944" elapsed="0.000056"/>
-</return>
-<msg time="2025-08-03T16:50:13.582105" level="INFO">${buttton_xpath} = //button[@class="mfp-arrow mfp-arrow-left mfp-prevent-close"]</msg>
-<var>${buttton_xpath}</var>
-<arg>${GENERIC_BUTTON}</arg>
-<arg>${button_name}</arg>
-<doc>Keyword to create dynamic xpath replacing single string or two string</doc>
-<status status="PASS" start="2025-08-03T16:50:13.580451" elapsed="0.001708"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${buttton_xpath}</arg>
-<arg>timeout=${timeout_ten_seconds}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.582415" elapsed="0.004888"/>
-</kw>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${buttton_xpath}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.587630" elapsed="0.265461"/>
-</kw>
-<msg time="2025-08-03T16:50:13.853517" level="INFO">${status} = True</msg>
-<var>${status}</var>
-<arg>Scroll Element Into View</arg>
-<arg>${buttton_xpath}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.587472" elapsed="0.266327"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>${status}==${False}</arg>
-<arg>Repeat Keyword</arg>
-<arg>${retry_ten_times}</arg>
-<arg>Press Keys</arg>
-<arg>${None}</arg>
-<arg>PAGE_DOWN</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.854143" elapsed="0.000499"/>
-</kw>
-<try>
-<branch type="TRY">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:13.855470" level="INFO">Clicking element '//button[@class="mfp-arrow mfp-arrow-left mfp-prevent-close"]'.</msg>
-<arg>${buttton_xpath}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.855086" elapsed="0.038628"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:13.854871" elapsed="0.038962"/>
-</branch>
-<branch type="EXCEPT">
-<pattern>SeleniumLibrary.ElementNotFound</pattern>
-<kw name="Click Element Using Javascript Executor" owner="Common_Keywords">
-<arg>${buttton_xpath}</arg>
-<status status="NOT RUN" start="2025-08-03T16:50:13.894099" elapsed="0.000060"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:13.893917" elapsed="0.000301"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:13.854806" elapsed="0.039471"/>
-</try>
-<arg>${prev_class}</arg>
-<doc>Clicks the button with the specified name</doc>
-<status status="PASS" start="2025-08-03T16:50:13.580120" elapsed="0.314197"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:13.902408" level="INFO">Element '//img[@class="mfp-img"]' is displayed.</msg>
-<arg>${THUMBNAIL_IMG}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.894427" elapsed="0.008142"/>
-</kw>
-<doc>Verifies navigation to the next thumbnail</doc>
-<status status="PASS" start="2025-08-03T16:50:13.247583" elapsed="0.655091"/>
-</kw>
-<kw name="Capture Page Screenshot without Zoom" owner="Common_Keywords">
-<kw name="Get Current Date" owner="DateTime">
-<msg time="2025-08-03T16:50:13.903299" level="INFO">${timestamp} = 20250803165013</msg>
-<var>${timestamp}</var>
-<arg>result_format=%Y%m%d%H%M%S</arg>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.903113" elapsed="0.000246"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:14.085315" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Next_Prev_Thumbnail_20250803165013.png"&gt;&lt;img src="Next_Prev_Thumbnail_20250803165013.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-08-03T16:50:14.085525" level="INFO">${SCREENSHOT_PATH} = /Users/mac/Documents/RobotFramework/Next_Prev_Thumbnail_20250803165013.png</msg>
-<var>${SCREENSHOT_PATH}</var>
-<arg>${name}_${timestamp}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-08-03T16:50:13.903481" elapsed="0.182104"/>
-</kw>
-<return>
-<value>${SCREENSHOT_PATH}</value>
-<status status="PASS" start="2025-08-03T16:50:14.085674" elapsed="0.000076"/>
-</return>
-<arg>Next_Prev_Thumbnail</arg>
-<status status="PASS" start="2025-08-03T16:50:13.902854" elapsed="0.183002"/>
-</kw>
-<kw name="Click button_name" owner="Common_Keywords">
-<kw name="Create Dynamic Xpath" owner="Common_Keywords">
-<if>
-<branch type="IF" condition="${single_value_replacement}">
-<kw name="Replace String" owner="String">
-<msg time="2025-08-03T16:50:14.087151" level="INFO">${final_xpath} = //button[@class="mfp-close"]</msg>
-<var>${final_xpath}</var>
-<arg>${xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-03T16:50:14.086994" elapsed="0.000218"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:14.086821" elapsed="0.000452"/>
-</branch>
-<branch type="ELSE">
-<kw name="Replace String" owner="String">
-<var>${final_replaced_xpath}</var>
-<arg>${xpath}</arg>
-<arg>KEY_PLACEHOLDER</arg>
-<arg>${key_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:14.087420" elapsed="0.000051"/>
-</kw>
-<kw name="Replace String" owner="String">
-<var>${final_xpath}</var>
-<arg>${final_replaced_xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:14.087564" elapsed="0.000049"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:14.087325" elapsed="0.000340"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:14.086805" elapsed="0.000905"/>
-</if>
-<return>
-<value>${final_xpath}</value>
-<status status="PASS" start="2025-08-03T16:50:14.087732" elapsed="0.000046"/>
-</return>
-<msg time="2025-08-03T16:50:14.087875" level="INFO">${buttton_xpath} = //button[@class="mfp-close"]</msg>
-<var>${buttton_xpath}</var>
-<arg>${GENERIC_BUTTON}</arg>
-<arg>${button_name}</arg>
-<doc>Keyword to create dynamic xpath replacing single string or two string</doc>
-<status status="PASS" start="2025-08-03T16:50:14.086322" elapsed="0.001606"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${buttton_xpath}</arg>
-<arg>timeout=${timeout_ten_seconds}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-08-03T16:50:14.088030" elapsed="0.005213"/>
-</kw>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${buttton_xpath}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-08-03T16:50:14.093672" elapsed="0.264407"/>
-</kw>
-<msg time="2025-08-03T16:50:14.358311" level="INFO">${status} = True</msg>
-<var>${status}</var>
-<arg>Scroll Element Into View</arg>
-<arg>${buttton_xpath}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-08-03T16:50:14.093476" elapsed="0.264914"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>${status}==${False}</arg>
-<arg>Repeat Keyword</arg>
-<arg>${retry_ten_times}</arg>
-<arg>Press Keys</arg>
-<arg>${None}</arg>
-<arg>PAGE_DOWN</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-08-03T16:50:14.358584" elapsed="0.000285"/>
-</kw>
-<try>
-<branch type="TRY">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:14.359369" level="INFO">Clicking element '//button[@class="mfp-close"]'.</msg>
-<arg>${buttton_xpath}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-03T16:50:14.359158" elapsed="0.031217"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:14.359011" elapsed="0.031488"/>
-</branch>
-<branch type="EXCEPT">
-<pattern>SeleniumLibrary.ElementNotFound</pattern>
-<kw name="Click Element Using Javascript Executor" owner="Common_Keywords">
-<arg>${buttton_xpath}</arg>
-<status status="NOT RUN" start="2025-08-03T16:50:14.390786" elapsed="0.000069"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:14.390585" elapsed="0.000327"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:14.358975" elapsed="0.031997"/>
-</try>
-<arg>${close_class}</arg>
-<doc>Clicks the button with the specified name</doc>
-<status status="PASS" start="2025-08-03T16:50:14.086054" elapsed="0.304960"/>
-</kw>
-<kw name=" Verify focus is on display Page" owner="Product_Display_Keywords">
-<kw name="Create Dynamic Xpath" owner="Common_Keywords">
-<if>
-<branch type="IF" condition="${single_value_replacement}">
-<kw name="Replace String" owner="String">
-<msg time="2025-08-03T16:50:14.392652" level="INFO">${final_xpath} = //button[@class="$value_to_replace=mfp-close"]</msg>
-<var>${final_xpath}</var>
-<arg>${xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-03T16:50:14.392315" elapsed="0.000437"/>
-</kw>
-<status status="PASS" start="2025-08-03T16:50:14.391952" elapsed="0.000878"/>
-</branch>
-<branch type="ELSE">
-<kw name="Replace String" owner="String">
-<var>${final_replaced_xpath}</var>
-<arg>${xpath}</arg>
-<arg>KEY_PLACEHOLDER</arg>
-<arg>${key_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:14.393062" elapsed="0.000060"/>
-</kw>
-<kw name="Replace String" owner="String">
-<var>${final_xpath}</var>
-<arg>${final_replaced_xpath}</arg>
-<arg>VALUE_PLACEHOLDER</arg>
-<arg>${value_to_replace}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="NOT RUN" start="2025-08-03T16:50:14.393228" elapsed="0.000054"/>
-</kw>
-<status status="NOT RUN" start="2025-08-03T16:50:14.392931" elapsed="0.000422"/>
-</branch>
-<status status="PASS" start="2025-08-03T16:50:14.391935" elapsed="0.001468"/>
-</if>
-<return>
-<value>${final_xpath}</value>
-<status status="PASS" start="2025-08-03T16:50:14.393432" elapsed="0.000071"/>
-</return>
-<msg time="2025-08-03T16:50:14.393619" level="INFO">${CLOSE_BTN} = //button[@class="$value_to_replace=mfp-close"]</msg>
-<var>${CLOSE_BTN}</var>
-<arg>${GENERIC_BUTTON}</arg>
-<arg>$value_to_replace=${close_class}</arg>
-<doc>Keyword to create dynamic xpath replacing single string or two string</doc>
-<status status="PASS" start="2025-08-03T16:50:14.391405" elapsed="0.002276"/>
-</kw>
-<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:14.398604" level="INFO">Element '//button[@class="$value_to_replace=mfp-close"]' did not exist.</msg>
-<arg>${CLOSE_BTN}</arg>
-<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<status status="PASS" start="2025-08-03T16:50:14.393792" elapsed="0.004943"/>
-</kw>
-<doc>Verifies that the focus is on the display page after clicking on close</doc>
-<status status="PASS" start="2025-08-03T16:50:14.391138" elapsed="0.007688"/>
-</kw>
-<kw name="Capture Page Screenshot without Zoom" owner="Common_Keywords">
-<kw name="Get Current Date" owner="DateTime">
-<msg time="2025-08-03T16:50:14.399609" level="INFO">${timestamp} = 20250803165014</msg>
-<var>${timestamp}</var>
-<arg>result_format=%Y%m%d%H%M%S</arg>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2025-08-03T16:50:14.399377" elapsed="0.000309"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-08-03T16:50:14.569286" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Focus_Display_Page_20250803165014.png"&gt;&lt;img src="Focus_Display_Page_20250803165014.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-08-03T16:50:14.569502" level="INFO">${SCREENSHOT_PATH} = /Users/mac/Documents/RobotFramework/Focus_Display_Page_20250803165014.png</msg>
-<var>${SCREENSHOT_PATH}</var>
-<arg>${name}_${timestamp}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-08-03T16:50:14.399818" elapsed="0.169749"/>
-</kw>
-<return>
-<value>${SCREENSHOT_PATH}</value>
-<status status="PASS" start="2025-08-03T16:50:14.569661" elapsed="0.000080"/>
-</return>
-<arg>Focus_Display_Page</arg>
-<status status="PASS" start="2025-08-03T16:50:14.399051" elapsed="0.170804"/>
-</kw>
-<kw name="Wait for Specified timeout" owner="Common_Keywords">
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
-<kw name="//h1[@class='dummy']">
-<msg time="2025-08-03T16:50:14.571993" level="FAIL">No keyword with name '//h1[@class='dummy']' found.</msg>
-<arg>${timeout}</arg>
-<status status="FAIL" start="2025-08-03T16:50:14.571929" elapsed="0.000119">No keyword with name '//h1[@class='dummy']' found.</status>
-</kw>
-<arg>${DUMMY_LOC}</arg>
-<arg>${timeout}</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-08-03T16:50:14.570252" elapsed="0.001864"/>
-</kw>
-<arg>${timeout_five_seconds}</arg>
-<status status="PASS" start="2025-08-03T16:50:14.570012" elapsed="0.002167"/>
-</kw>
-<var name="${counter}">3</var>
-<status status="PASS" start="2025-08-03T16:50:12.979661" elapsed="1.592564"/>
-</iter>
-<var>${counter}</var>
-<value>1</value>
-<value>4</value>
-<status status="PASS" start="2025-08-03T16:50:09.793679" elapsed="4.778611"/>
-</for>
-<arg>${thumbnail_color}</arg>
-<doc>Clicks on the thumbnail product display for the specified product</doc>
-<status status="PASS" start="2025-08-03T16:50:09.793273" elapsed="4.779111"/>
-</kw>
-<doc>Test case to verify the thumbnail product display on the home page</doc>
-<status status="PASS" start="2025-08-03T16:50:01.489605" elapsed="13.083011"/>
+<arg>ProductDisplayPage</arg>
+<status status="PASS" start="2025-08-07T07:41:50.525980" elapsed="0.196652"/>
+</kw>
+<doc>&lt;b&gt;Objective(s):&lt;/b&gt;
+ Validate that Product Name, Brand and Product Code are displayed in the Product Display Page
+&lt;b&gt;Prerequisite(s):&lt;/b&gt;
+    1. User must have access to the application
+    2. User must have valid credentials
+&lt;b&gt;Requirement Coverage:&lt;/b&gt;
+    JIRA-126</doc>
+<tag>ProductDisplay</tag>
+<tag>ProductInfo</tag>
+<tag>Sanity</tag>
+<status status="PASS" start="2025-08-07T07:41:42.925914" elapsed="7.796917"/>
 </test>
-<status status="PASS" start="2025-08-03T16:50:01.365791" elapsed="13.207224"/>
+<status status="PASS" start="2025-08-07T07:41:42.771348" elapsed="7.951863"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">ProductDisplay</stat>
+<stat pass="1" fail="0" skip="0">ProductInfo</stat>
+<stat pass="1" fail="0" skip="0">Sanity</stat>
 </tag>
 <suite>
 <stat name="ProductDisplay" id="s1" pass="1" fail="0" skip="0">ProductDisplay</stat>

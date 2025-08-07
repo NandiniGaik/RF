@@ -55,4 +55,14 @@ Verify navigation to next and prev thumbnail
     ${CLOSE_BTN}=    Create Dynamic Xpath    ${GENERIC_BUTTON}    $value_to_replace=${close_class}
     Element Should Not Be Visible    ${CLOSE_BTN}
 
-     
+Verify Product Name,Brand and Product Code is
+    [Documentation]    Verifies that Product Name, Brand and Product Code are displayed in the Product Display Page
+    [Arguments]    ${product_name}    ${product_brand}    ${product_code}
+    ${product_name_xpath}=    Create Dynamic Xpath    ${GENERIC_H1}    ${product_name}
+    Element Should Be Visible    ${product_name_xpath}
+    ${brand_txt}=    Get Text    ${BRAND}
+    Should Be Equal    ${brand_txt}    ${product_brand}
+    ${actual_product_code}=    Get Text    ${CODE}
+    ${parts}=          Split String    ${actual_product_code}    :    
+    ${actual_product_code}=        Set Variable    ${parts[1]}          
+    Should Be Equal    ${actual_product_code}    ${product_code}
