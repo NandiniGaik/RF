@@ -13,7 +13,7 @@ Search product in Search Bar
     [Arguments]    ${product_name}    ${input_name_field}
     Input text in field    ${product_name}    ${input_name_field}
     #Wait for Specified timeout    ${timeout_five_seconds}
-    Click button_name    ${button_name}
+    Click button_name    ${button_name}    ${GENERIC_BUTTON}
     
 Click on on thumbnail product display and verify thumbnails
     [Documentation]    Clicks on the thumbnail product display for the specified product
@@ -30,7 +30,7 @@ Click on on thumbnail product display and verify thumbnails
         Capture Page Screenshot without Zoom    Thumbnail_white_box
         Verify navigation to next and prev thumbnail
         Capture Page Screenshot without Zoom    Next_Prev_Thumbnail
-        Click button_name    ${close_class}
+        Click button_name    ${close_class}    ${GENERIC_BUTTON}
         Verify focus is on display Page
         Capture Page Screenshot without Zoom    Focus_Display_Page
         Wait for Specified timeout    ${timeout_five_seconds}
@@ -45,9 +45,9 @@ Verify color of thumbnail white box
 
 Verify navigation to next and prev thumbnail
     [Documentation]    Verifies navigation to the next thumbnail
-    Click button_name    ${next_class}
+    Click button_name    ${next_class}    ${GENERIC_BUTTON}
     Element Should Be Visible    ${THUMBNAIL_IMG}
-    Click button_name    ${prev_class}
+    Click button_name    ${prev_class}    ${GENERIC_BUTTON}
     Element Should Be Visible    ${THUMBNAIL_IMG}
 
  Verify focus is on display Page

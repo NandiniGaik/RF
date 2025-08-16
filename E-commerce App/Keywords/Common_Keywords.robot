@@ -63,7 +63,7 @@ Click Element Using Javascript Executor
 
 Click button_name
     [Documentation]    Clicks the button with the specified name
-    [Arguments]    ${button_name}
+    [Arguments]    ${button_name}    ${GENERIC_BUTTON}
     ${buttton_xpath}=    Create Dynamic Xpath    ${GENERIC_BUTTON}    ${button_name}
     Wait Until Page Contains Element    ${buttton_xpath}    timeout=${timeout_ten_seconds}
     ${status}=    Run Keyword And Return Status    Scroll Element Into View    ${buttton_xpath}

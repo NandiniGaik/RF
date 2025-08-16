@@ -1,5 +1,4 @@
 *** Settings ***
-Library    SeleniumLibrary
 Library    OperatingSystem
 Resource    ../Keywords/Common_Keywords.robot
 Resource    ../Keywords/Key_Login_Keywords.robot
