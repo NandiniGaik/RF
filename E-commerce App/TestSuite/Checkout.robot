@@ -25,5 +25,5 @@ Checkout_Produtcs
     Click Dynamic Xpath Element    ${GENERIC_TOP_LINK}    ${shopping_cart_class}
     Click Dynamic Xpath Element    ${GENERIC_A_CLASS}    ${checkout_class}
     Verify "${product_to_search}" is not available 
-    Capture Page Screenshot    ProductNotAvailable
+    Capture Whole Page Screenshot    ProductNotAvailable
 
